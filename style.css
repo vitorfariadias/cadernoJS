@@ -1,0 +1,25 @@
+.exemplo {
+
+    display: inline-block;
+    background-color: #AFEEEE;
+    font-style: italic;
+    border: 1px grey;
+    border-radius: 0.5rem;
+    margin-left: 2.5rem;
+    padding: 0.5rem;
+    
+}
+
+h3{
+    background-color: yellow;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+
+}
+
+h4{
+    background-color: yellow;
+    padding: 0.5rem 0rem 0.5rem 2rem;
+    border-radius: 0.5rem;
+
+}

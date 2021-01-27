@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel = "stylesheet" href="style.css"/>
+
+    <title> JavaScript - Testes </title>
+</head>
+<body>
+    <h1>Revisão de JavaScript - Rocketseat</h1>
+
+    <p><h3>Etapa 3 - Objetos</h3></p>
+
+    <li> Uso do console para manipular Strings </li>
+
+    <h4><i> Sintaxe: </i></h4>
+    <p>{ nome: "valor"} ou { nome : "funcionalidade"}</p>
+
+    <p> Objetos podem ter funcionalidades em seus atributos. </p>
+    <p> Seu uso é para <b> estruturar </b> os dados.</p>
+
+    <div class="exemplo">
+        { nome: "Vitor", <br/>
+            andar: function(){ <br/>
+                console.log("andar") <br/>
+            }<br/>  
+        }<br/> 
+        
+    </div>
+
+    <p><h3> Etapa 4 - Variáveis </h3></p>
+    
+    <h4><i> Sintaxe: </i></h4>
+    <p>nomeDaVariável = valor</p>
+
+    <p>Variáveis são usadas para armazenar valores.</p>
+    <p>JavaScript é uma linguagem fracamente tipada (não precisa declarar o tipo de dado que variável irá receber) e dinâmica (o tipo de dado da variável pode ser atualizado ao decorrer do código).</p>
+
+    <p>Podem ser do tipo:</p>
+    <ul>
+        <li> var - variável global com Hoisting </li>
+        <li>let - variável local</li>
+        <li>const - constante (valor não poderá ser alterado ao longo do código)</li>
+    </ul>    
+    
+    <div class = "exemplo">
+        
+        var clima = "Frio" - pode ser sobescrito <br/>
+        let clima = "Frio" - pode ser sobescrito <br/>
+        const clima = "Frio" - não pode ser sobescrito nem ter seu tipo modificado
+        
+    </div>
+
+    <div class = "subtitulo" >
+        <h4> Hoisting </h4> 
+    </div>
+
+        <p> Variáveis declaradas como <b> var </b> sofrem o efeito dessa funcionalidade. O código JavaScript (lido verticalmente, de cima para baixo), que possui a <b> var </b> invocada antes de ser declarada, informa que a variável é do tipo <i> Undefined </i>, indicando que seu escopo não é atendido, mas ela está declarada no código.</p>
+    
+    <h4> Agrupamento de declarações </h4>
+
+    <div class = "exemplo">
+        
+        let nome, idade, cidade <br/>
+
+        nome = "Vitor" <br/>
+        idade = 23 <br/>
+        cidade = "Patos de Minas" <br/>
+
+        console.log(nome, idade, cidade)
+        
+    </div>
+
+    <h4> Interpolação com Template Literals / Template String</h4>
+
+    <p> É uma forma de concatenação. </p>
+
+    <div class = "exemplo">
+        
+        let nome, idade, cidade <br/>
+
+        nome = "Vitor" <br/>
+        idade = 23 <br/>
+        cidade = "Patos de Minas" <br/>
+
+        console.log(`O ${nome} tem ${idade} anos e mora em ${cidade}`)
+            
+    </div>
+
+    <h4> Acessando dados em um objeto </h4>
+
+    <div class = "exemplo">
+        
+        let pessoa = { <br/>
+            nome: "Vitor", <br/>
+            idade: 23, <br/>
+            cidade: "Patos de Minas" <br/>
+        } <br/>
+    
+        console.log(pessoa.nome, pessoa.cidade)
+       
+    </div>    
+
+    <p> Pode-se colocar, em um Array, um objeto. </p>
+
+    <div class = "exemplo">
+
+        let student = { <br/>
+            name: "Vitor", <br/>
+            age: 23, <br/>
+            stars: 4.5, <br/>
+            isSubscribed: true, <br/>
+            weight: 87 <br/>
+        } <br/>
+        <br/>
+        let students = [student] <br/>
+        <br/>
+        console.log(students)<br/>
+        <br/>
+        <b>Saída: </b> <br/>
+        [{}] <br/>
+        0: <br/>
+        age: 23 <br/>
+        isSubscribed: true <br/>
+        name: "Vitor" <br/>
+        stars: 4.5 <br/>
+        weight: 87
+
+    </div>
+
+    <p><h3>Etapa 6 - Funções</h3></p>
+
+    <h4><i> Sintaxe: </i></h4>
+    <ul>
+        <li>
+            <p>
+                Declarando uma função:
+            </p>
+
+            function nomeDaFuncao() {</br>
+                </br>
+            } </br>
+        </li>
+
+        <li>
+            <p>
+                Invocando/chamando uma função:
+            </p>
+
+            nomeDaFuncao()</br>
+        </li>
+    </ul>
+
+    <h3>Função Anônima / Function Expression</h3>
+    <ul>
+        <li>Quando a função é passada dentro de uma variável</li>
+        <li>O nome da função não é declarado</li>
+        </br>
+        <div class = "exemplo">
+            
+            const soma = function(number1, number2){</br>
+                console.log(number1 + number2)</br>
+            }</br>
+            </br>
+            soma(5,4)</br>
+        </div>
+    </ul>  
+
+    <h3>Parâmetros</h3>
+    <ul>
+        <li>No exemplo acima, são utilizados parâmetros (<b>number1</b> e <b>number2</b>) para a realização da soma.</li>
+        <li>Parâmetros são variáveis de escopo local, utilizados para se obter o retorno de uma função.
+        </br></br>
+        <div class = "exemplo">
+            
+            const soma = function(<b>number1, number2</b>){</br>
+            }</br>
+    
+        </div>
+        </li>
+    </ul>
+</body>
+</html>
