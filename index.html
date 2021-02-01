@@ -181,5 +181,84 @@
         </div>
         </li>
     </ul>
+
+    <h3>Arrow Function</h3>
+
+    <p>Forma moderna de se declarar uma função. Utiliza-se uma seta (<i>=></i>.)</p>
+
+    <h4>Sintaxe:</h4>
+
+    <p><i><b>function(){}</b></i> se torna <i><b>() => {}</b></i></p>
+
+    <div class = "exemplo">
+        <b><i>Exemplo 01:</i></b> <br/><br/>
+        const sayMyName = (name) => {<br/>
+            console.log(name)<br/>
+        }<br/>
+        <br/>
+        sayMyName('Nunno')<br/>
+        <br/>
+
+        <b><i>Exemplo 01:</i></b> <br/><br/>
+        const sayMyName = () => {<br/>
+            console.log('Vitor')<br/>
+        }<br/>
+        <br/>
+        sayMyName()<br/>
+
+    </div>
+
+    <h3>Callback</h3>
+
+
+    <p>Quando uma função é parâmetro, "chama de volta" (callback) outra.</p>
+
+    <div class = "exemplo">
+
+        function sayMyName(name){<br/>
+            
+            name()<br/>
+        
+        }<br/>
+        
+        sayMyName(<br/>
+        <br/>
+            () => {<br/>
+                console.log('Dentro de uma callback')<br/>
+            }<br/>
+        )<br/>
+
+    </div>
+
+    <h3>Função Construtora</h3>
+
+    <p>Cria um novo objeto para ser utilizado durante o código, como se fosse um "template".</p>
+    <p>O nome dessa função deve ser iniciado com letra maiúscula, como boa prática.</p>
+
+    <h4>Sintaxe:</h4>
+    <br/>
+    function FuncaoConstrutora() {
+
+    }
+    <br/>
+    const variavel = new FuncaoConstrutora('parametro')
+    <br/><br/>
+
+    <div class = "exemplo">
+        function Pessoa(name){<br/>
+            this.name = name<br/>
+            this.walk = function(){<br/>
+                return `${name} está andando`<br/>
+            }<br/>
+        }<br/>
+        <br/>
+        const vitor = new Pessoa('Vitor')<br/>
+        <br/>
+        console.log(vitor.walk())<br/>
+        <br/>
+        <b>Saída:</b><br/><br/>
+        <i>Vitor está andando</i>
+    </div>
+
 </body>
 </html>
